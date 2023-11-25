@@ -1,17 +1,18 @@
+import { FirstProgramStyle, Avatars, Names, TagAndLoc, ListName, Lists } from './Profile.styled';
 
 export const Profile = ({ user: { avatar, username, tag, location, stats: { followers, views, likes } } }) => {
-  return (<div>
-    <img src={avatar} alt={username} width="30" height="30" />
-    <p>{username}</p>
-    <p>@{tag}</p>
-    <p>{location}</p>
-    <ul>
-      <li><span>Followers</span>
-        <span>{followers}</span></li>
-      <li><span>Views</span>
-        <span>{views}</span></li>
-      <li><span>Likes</span>
-        <span>{likes}</span></li>
-    </ul>
-  </div>);
+  return (<FirstProgramStyle>
+    <Avatars src={avatar} alt={username} width="65" height="65" />
+    <Names>{username}</Names>
+    <TagAndLoc>@{tag}</TagAndLoc>
+    <TagAndLoc>{location}</TagAndLoc>
+    <ListName>
+      <Lists><span>Followers</span>
+        <span>{followers}</span></Lists>
+      <Lists><span>Views</span>
+        <span>{views}</span></Lists>
+      <Lists><span>Likes</span>
+        <span>{likes}</span></Lists>
+    </ListName>
+  </FirstProgramStyle>);
 };

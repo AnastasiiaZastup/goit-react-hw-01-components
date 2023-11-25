@@ -1,16 +1,20 @@
+import {SecondProgramStyle, ListForStatic, ListsLi} from './Statistics.styled';
 
 export const Statistics = ({ data }) => {
     return (
-        <ul>
+        
+        <SecondProgramStyle>
             <h1>Upload stats</h1>
+            <ListForStatic>
             {data.map(item => {
                 return (
-                    <li key={item.id}>
+                    <ListsLi key={item.id}>
                         <span>{item.label}</span>
                         <span>{item.percentage}%</span>
-                    </li>
+                    </ListsLi>
                 )
             })}
-        </ul>
+                </ListForStatic>
+        </SecondProgramStyle>
     )
 };

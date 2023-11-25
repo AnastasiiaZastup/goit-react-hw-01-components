@@ -9,6 +9,9 @@ import {TransactionHistory} from "./transaction/TransactionHistory"
 
 
 
+
+
+
 export const App = () => {
   return (
     <div>
@@ -16,6 +19,7 @@ export const App = () => {
       <Statistics data={data} />
       <FriendList friends={friends} />
       <TransactionHistory transactions={transactions} />
+      
     </div>
 
   );

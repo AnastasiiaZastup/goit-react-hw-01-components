@@ -1,8 +1,9 @@
 import { FriendListItem } from "./FriendListItem";
+import {ListStyleFriend} from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
     return (
-        <ul>
+        <ListStyleFriend>
             {friends.map(friend => {
                 return (
                     <FriendListItem
@@ -13,6 +14,6 @@ export const FriendList = ({ friends }) => {
                     />
                 )
             })}
-        </ul>
+        </ListStyleFriend>
     )
 };
