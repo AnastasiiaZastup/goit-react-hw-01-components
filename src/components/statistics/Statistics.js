@@ -1,10 +1,10 @@
 import {SecondProgramStyle, ListForStatic, ListsLi} from './Statistics.styled';
 
-export const Statistics = ({ data }) => {
+export const Statistics = ({ data, title }) => {
     return (
         
         <SecondProgramStyle>
-            <h1>Upload stats</h1>
+            {title && <h1>{title}</h1>}
             <ListForStatic>
             {data.map(item => {
                 return (
